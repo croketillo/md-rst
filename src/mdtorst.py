@@ -16,21 +16,24 @@ def install_pandoc():
 
 @click.command()
 @click.argument('input_file', type=click.Path(exists=True))
-@click.argument('output_file', type=click.Path())
+@click.argument('output_file', type=click.Path(), required=False)
 def convert_md_to_rst(input_file, output_file):
     """
     Convert a Markdown file to reStructuredText.
 
     \b
     --> INPUT_FILE: Input Markdown file name
-    <-- OUTPUT_FILE: Output reStructuredText file name
+    <-- OUTPUT_FILE: Output reStructuredText file name (Optional)
     """
     # Get current directory
     user_directory = os.getcwd()
 
-    # Construct the complete path
-    input_file = os.path.join(user_directory, input_file)
-    output_file = os.path.join(user_directory, output_file)
+    # If output_file is not provided, construct the output file name
+    if not output_file:
+        base_name, _ = os.path.splitext(os.path.basename(input_file))
+        output_file = os.path.join(user_directory, f"{base_name}.rst")
+    else:
+        output_file = os.path.join(user_directory, output_file)
 
     try:
         # Try to convert the Markdown file to reStructuredText
@@ -53,4 +56,3 @@ def convert_md_to_rst(input_file, output_file):
         except Exception as e:
             click.echo(f"Error after installing Pandoc: {e}")
             raise click.Abort()
-

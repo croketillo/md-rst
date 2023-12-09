@@ -84,7 +84,7 @@ def read(file_name=None, is_encoding=True, ignore_raises=False):
 setup(
     name='md-rst',
     version=VERSION,
-    description='Marckdown to reStructuredText, .md to .rst',
+    description='CLI comverter Marckdown to reStructuredText (.md to .rst)',
     long_description=read("README.rst"),
     url='https://github.com/croketillo/md-rst',
     author='croketillo',

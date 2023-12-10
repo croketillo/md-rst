@@ -3,7 +3,7 @@ from os import path
 from setuptools import setup, find_packages
 from sys import version_info
 
-VERSION= '0.1.2'
+VERSION= '0.1.3'
 CURR_PATH = "{}{}".format(path.abspath(path.dirname(__file__)), '/')
 
 def path_format(file_path=None, file_name=None, is_abspath=False,
@@ -84,7 +84,7 @@ def read(file_name=None, is_encoding=True, ignore_raises=False):
 setup(
     name='md-rst',
     version=VERSION,
-    description='CLI comverter Marckdown to reStructuredText (.md to .rst)',
+    description='CLI converter Marckdown to reStructuredText (.md to .rst)',
     long_description=read("README.rst"),
     url='https://github.com/croketillo/md-rst',
     author='croketillo',

@@ -3,7 +3,7 @@ from os import path
 from setuptools import setup, find_packages
 from sys import version_info
 
-VERSION= '0.1.3'
+VERSION= '0.1.5'
 CURR_PATH = "{}{}".format(path.abspath(path.dirname(__file__)), '/')
 
 def path_format(file_path=None, file_name=None, is_abspath=False,
@@ -105,6 +105,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Topic :: Text Processing :: Markup :: reStructuredText',
+        'Topic :: Text Processing :: Markup :: Markdown',
         'Topic :: Terminals',  
         'Topic :: Utilities', 
     ],

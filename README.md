@@ -22,6 +22,7 @@ md-rst input.md output.rst
 ```
 
 Replace input.md with the path to your input Markdown file and output.rst with the desired output reStructuredText file.
+If you do not specify "output.rst" it will use the same name as the .md file.
 
 ## License
 This project is licensed under the GNU-GPL3 License. Read LICENSE for more information.

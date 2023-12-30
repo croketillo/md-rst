@@ -26,6 +26,7 @@ Run the converter from the command line:
 
 Replace input.md with the path to your input Markdown file and
 output.rst with the desired output reStructuredText file.
+If you do not specify "output.rst" it will use the same name as the .md file.
 
 License
 -------
